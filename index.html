@@ -33,7 +33,7 @@ var received = function(message) {
   if (typeof message !== "object") {  // ignore pings
     if (window.$agent) {
       // Jasonette Agent 
-      $agent.trigger("onmessage", message)
+      $agent.trigger("onmessage", { "message": message})
     } else {
       // Web App
       var line = document.createElement("pre");
